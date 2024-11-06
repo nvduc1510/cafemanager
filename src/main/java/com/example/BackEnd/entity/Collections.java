@@ -25,8 +25,8 @@ public class Collections {
     @Column(name = "collection_description")
     private String collectionDescription;
 
-    @OneToMany
-    @Column(name = "product_id")
-    private List<Product> products;
+    public Collections(Integer collectionId) {
+        this.collectionId = collectionId;
+    }
 }
 

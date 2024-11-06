@@ -1,6 +1,8 @@
 package com.example.BackEnd.service.mapper.impl;
 
+import com.example.BackEnd.dto.CollectionDTO;
 import com.example.BackEnd.dto.UserDTO;
+import com.example.BackEnd.entity.Collections;
 import com.example.BackEnd.entity.User;
 import com.example.BackEnd.service.mapper.UserMapper;
 import org.modelmapper.ModelMapper;
@@ -13,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Component("UserMapperImpl")
 public class UserMapperImpl implements UserMapper {
+
     @Override
     public UserDTO entityToDto(User entity) {
         ModelMapper modelMapper = new ModelMapper();

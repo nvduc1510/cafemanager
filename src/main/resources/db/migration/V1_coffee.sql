@@ -46,7 +46,9 @@ CREATE TABLE IF NOT EXISTS `product` (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(100) NOT NULL,
     product_price INT NOT NULL,
-    product_image VARCHAR(255)
+    product_image VARCHAR(255),
+    collection_id INT NOT NULL,
+    FOREIGN KEY (collection_id) REFERENCES collections(collection_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Collections (Loại hàng) --

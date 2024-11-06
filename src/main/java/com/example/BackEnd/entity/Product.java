@@ -18,7 +18,7 @@ public class Product {
     private Integer productId;
 
     @Column(name = "product_name")
-    private String product_name;
+    private String productName;
 
     @Column(name = "product_price")
     private Integer productPrice;
@@ -26,4 +26,15 @@ public class Product {
     @Column(name = "product_image")
     private String productImage;
 
+    @ManyToOne
+    @JoinColumn(name = "collection_id")
+    private Collections collections;
+
+    public Product(Integer productId, String productName, Integer productPrice, String productImage, Integer collectionId) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productImage = productImage;
+        this.collections = new Collections(collectionId);
+    }
 }

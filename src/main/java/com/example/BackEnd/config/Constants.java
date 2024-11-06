@@ -37,13 +37,15 @@ public class Constants {
     public static final String GET_ALL_SUCCESS = "Lấy ra tất cả bản ghi thành công";
     public static final String GET_ALL_FALSE = "Không có dữ liệu!";
     public static final String SUCCESS = "Thành công!";
-    public static final String REGISTER_FALSE = "Register thất bại!";
-    public static final String GET_FALSE = "Không có dữ liệu!";
-    public static final String NOT_ROLE = "Bạn không có quyền truy cập!";
-    public static final String DELETE_SUCCESS = "Xóa thành công!";
-    public static final String DELETE_FALSE = "Xóa thất bại!";
+    public static final String CREATE_FALSE = "Thêm mới thất bại!";
+    public static final String CREATE_SUCCESS = "Thêm mới thành công!";
     public static final String UPDATE_SUCCESS = "Cập nhật thành công!";
     public static final String UPDATE_FAlSE = "Cập nhật thất bại!";
+    public static final String GET_FALSE = "Không có dữ liệu!";
+    public static final String NOT_ROLE = "Bạn không có quyền truy cập!";
+    public static final String REGISTER_FALSE = "Register thất bại!";
+    public static final String DELETE_SUCCESS = "Xóa thành công!";
+    public static final String DELETE_FALSE = "Xóa thất bại!";
 
     // gửi mail
     public static final String SUBJECT_MAIL = "Xác nhận thông tin khách hàng!";
