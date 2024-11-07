@@ -14,6 +14,7 @@ public class ApiResponse {
     private String message;
     private long total;
     private Object params;
+
     public ApiResponse (Integer status, String message, Object params) {
         this.status = status;
         this.message = message;
