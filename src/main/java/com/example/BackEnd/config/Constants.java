@@ -55,5 +55,11 @@ public class Constants {
     public static final String VALID_EMAIL = "Email đã tồn tại!";
     public static final String INVALID_EMAIL = "Email không tồn tại!";
 
+    //product
+    public static final String VALID_PRODUCT = "Sản phẩm đã tồn tại";
+
+
+    // Collections
+    public static final String INVALID_COLLECTIONS = "Loại sản phẩm không tồn tại";
 
 }

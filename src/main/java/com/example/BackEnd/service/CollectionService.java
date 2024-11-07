@@ -7,7 +7,7 @@ import com.example.BackEnd.entity.Collections;
 public interface CollectionService {
     ApiResponse createCollection(CollectionDTO collectionDTO);
     ApiResponse getAllCollections(String collectionName, String ordCollectionName, int offset, int limit);
-    ApiResponse getCollectionById(Integer categoryId);
+    ApiResponse getCollectionById(Integer collectionId);
     ApiResponse updateCollection(CollectionDTO collectionDTO, Integer collectionId);
     ApiResponse deleteCollection(Integer collectionId);
 

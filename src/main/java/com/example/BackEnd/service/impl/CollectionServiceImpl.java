@@ -60,7 +60,7 @@ public class CollectionServiceImpl implements CollectionService {
             Sort sort = Sort.by(
                     "DESC".equalsIgnoreCase(ordCollectionName) ? Sort.Order.desc("collectionName") : Sort.Order.asc("collectionName"));
             Pageable pageable = PageRequest.of(page, limit, sort);
-            Page<Collections> collectionsPage = collectionRepository.listCollections(collectionName,pageable);
+            Page<Collections> collectionsPage = collectionRepository.listCollections(escapeGameName,pageable);
             total = collectionsPage.getTotalElements();
             collectionDTOS = collectionsPage.map(collections -> {
                 CollectionDTO collectionDTO = new CollectionDTO();
@@ -76,8 +76,15 @@ public class CollectionServiceImpl implements CollectionService {
     }
 
     @Override
-    public ApiResponse getCollectionById(Integer categoryId) {
-        return null;
+    public ApiResponse getCollectionById(Integer collectionId) {
+        Optional<Collections> collection = collectionRepository.findById(collectionId);
+        if (collection.isPresent()) {
+            CollectionDTO collectionDTO = collectionMapper.entityToDto(collection.get());
+            apiResponse = new ApiResponse(HttpServletResponse.SC_OK, Constants.SUCCESS, collectionDTO);
+        } else {
+            apiResponse = new ApiResponse(HttpServletResponse.SC_BAD_GATEWAY, Constants.GET_FALSE, collectionId);
+        }
+        return apiResponse;
     }
 
     @Override

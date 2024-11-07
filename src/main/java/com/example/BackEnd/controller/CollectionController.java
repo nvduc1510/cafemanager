@@ -63,4 +63,9 @@ public class CollectionController {
 
     }
 
+    @GetMapping("/detail/{collectionId}")
+    public ResponseEntity<?> getCollectionById (@PathVariable Integer collectionId) {
+        return ResponseEntity.ok(collectionService.getCollectionById(collectionId));
+    }
+
 }
